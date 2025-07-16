@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva Ingeniería</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Malla Interactiva de Cursos</h1>
+    <div class="header-actions">
+      <button id="resetBtn" type="button" class="action-btn">Reiniciar Malla</button>
+      <label class="toggle-compact"><input type="checkbox" id="compactToggle" /> Vista compacta</label>
+    </div>
+  </header>
+
+  <main id="malla" class="malla-grid" aria-live="polite"></main>
+
+  <template id="courseTemplate">
+    <button class="course locked" data-code="" disabled>
+      <span class="course-code"></span>
+      <span class="course-name"></span>
+      <span class="course-status-text"></span>
+      <span class="course-reqs"></span>
+      <span class="course-check" aria-hidden="true">✓</span>
+    </button>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
